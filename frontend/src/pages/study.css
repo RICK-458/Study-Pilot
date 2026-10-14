@@ -1,0 +1,107 @@
+/* Shared by the Flashcards and Quiz pages */
+.study-main { flex: 1; min-width: 0; overflow-y: auto; padding: 48px 32px; }
+.study-main > * { max-width: 720px; margin: 0 auto; }
+.study-main h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.03em; }
+.lead { color: var(--muted); font-size: 15px; margin-top: 6px; line-height: 1.5; }
+.hint { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 18px 0; }
+
+/* Sidebar lists */
+.drop.compact { padding: 10px 14px; }
+.side-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.side-list button { width: 100%; display: flex; align-items: center; gap: 8px; justify-content: space-between; text-align: left; padding: 8px; border-radius: 8px; font-size: 13px; }
+.side-list button:hover { background: #111114; }
+.side-list button.active { background: #1a1a1d; }
+.side-list .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge { flex-shrink: 0; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.side-list .badge:not(.pass):not(.fail) { color: var(--pink); }
+.badge.pass { color: #7fe0a0; }
+.badge.fail { color: var(--salmon); }
+
+/* Buttons */
+.primary, .secondary { padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 500; }
+.primary { background: #fff; color: #000; }
+.secondary { border: 1px solid var(--line); color: var(--text); }
+.secondary:not(:disabled):hover { border-color: #45454c; }
+
+/* Forms */
+.study-form { display: flex; flex-direction: column; gap: 22px; }
+.study-form label { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--muted); }
+.study-form input { font-size: 15px; padding: 12px 14px; }
+.study-form .primary { align-self: flex-start; }
+.choices { display: flex; gap: 8px; flex-wrap: wrap; }
+.choices button { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); font-size: 14px; color: var(--text); }
+.choices button.on { background: #fff; color: #000; border-color: #fff; }
+.form-error { color: var(--salmon); font-size: 14px; line-height: 1.5; }
+
+/* Deck view */
+.deck-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.deck-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.card-list { list-style: none; border-top: 1px solid var(--line); }
+.card-list li { display: grid; grid-template-columns: 60px 1fr auto; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.card-list .due { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.box { font-family: var(--mono); font-size: 11px; color: #000; padding: 2px 6px; border-radius: 4px; text-align: center; }
+.box-1 { background: var(--salmon); }
+.box-2 { background: var(--pink); }
+.box-3 { background: var(--blue); }
+.box-4, .box-5 { background: #7fe0a0; }
+
+/* Progress */
+.progress { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
+.progress-bar { height: 4px; background: var(--line); border-radius: 2px; margin: 10px 0 28px; overflow: hidden; }
+.progress-bar i { display: block; height: 100%; background: var(--pink); transition: width .3s; }
+
+/* Flip card */
+.flashcard { display: block; width: 100%; height: 320px; perspective: 1200px; position: relative; text-align: left; }
+.face { position: absolute; inset: 0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px; backface-visibility: hidden; transition: transform .45s; }
+.front-face { background: var(--panel); border: 1px solid var(--line); }
+.back-face { background: var(--blue); color: #000; transform: rotateY(180deg); }
+.flashcard.flipped .front-face { transform: rotateY(-180deg); }
+.flashcard.flipped .back-face { transform: rotateY(0); }
+.face p { flex: 1; font-size: 21px; line-height: 1.45; letter-spacing: -0.01em; overflow-y: auto; white-space: pre-wrap; }
+.face-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; opacity: .6; }
+.face-hint { font-size: 13px; color: var(--muted); }
+.back-face .cite { align-self: flex-start; margin: 0; background: rgba(0,0,0,.12); }
+.answer-buttons { display: flex; gap: 12px; margin-top: 18px; transition: opacity .2s; }
+.answer-buttons.hidden { opacity: 0; pointer-events: none; }
+.answer-buttons button { flex: 1; padding: 14px; border-radius: 14px; font-size: 15px; font-weight: 500; color: #000; }
+.answer-buttons .again { background: var(--salmon); }
+.answer-buttons .good { background: #7fe0a0; }
+.study-done { text-align: center; padding-top: 60px; }
+.study-done .primary { margin-top: 24px; }
+
+/* Quiz */
+.question h2 { font-size: 22px; font-weight: 600; line-height: 1.35; letter-spacing: -0.02em; margin: 10px 0 22px; }
+.question textarea { width: 100%; font-size: 15px; line-height: 1.5; resize: vertical; }
+.options { display: flex; flex-direction: column; gap: 8px; }
+.options button, .options > div { display: flex; align-items: center; gap: 12px; text-align: left; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; font-size: 15px; line-height: 1.4; }
+.options button:hover { border-color: #45454c; }
+.options button.chosen { border-color: var(--pink); background: rgba(255,142,196,.08); }
+.letter { flex-shrink: 0; width: 24px; height: 24px; border-radius: 6px; background: #1a1a1d; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; }
+.quiz-nav { display: flex; justify-content: space-between; margin-top: 28px; }
+
+/* Results */
+.score { font-size: 40px; font-weight: 600; letter-spacing: -0.03em; }
+.score.pass { color: #7fe0a0; }
+.score.fail { color: var(--salmon); }
+.review { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+.review > li { border: 1px solid var(--line); border-left: 3px solid; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.review > li.right { border-left-color: #7fe0a0; }
+.review > li.wrong { border-left-color: var(--salmon); }
+.review h3 { font-size: 16px; font-weight: 600; line-height: 1.4; }
+.review .cite { align-self: flex-start; margin: 0; }
+.review-options > div { font-size: 14px; padding: 10px 12px; color: var(--muted); }
+.review-options .correct { border-color: #7fe0a0; color: var(--text); }
+.review-options .incorrect { border-color: var(--salmon); color: var(--text); }
+.review-options em { font-style: normal; font-size: 12px; color: var(--muted); margin-left: auto; }
+.short-review { display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.55; color: #d6d6da; }
+.short-review .grade { font-family: var(--mono); font-size: 13px; color: var(--pink); }
+.concepts { font-size: 13px; }
+.concepts.good { color: #7fe0a0; }
+.concepts.bad { color: var(--salmon); }
+.explanation { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+@media (max-width: 800px) {
+  .study-main { padding: 24px 16px; }
+  .flashcard { height: 280px; }
+  .face p { font-size: 18px; }
+}

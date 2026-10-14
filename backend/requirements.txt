@@ -1,5 +1,12 @@
 PyMuPDF
 faiss-cpu
+chromadb
 sentence-transformers
 openai
 python-dotenv
+easyocr
+fastapi
+uvicorn
+python-multipart
+youtube-transcript-api
+requests

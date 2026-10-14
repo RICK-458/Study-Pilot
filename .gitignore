@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Vector database: rebuilt locally with `python -m rag.indexer`
+backend/chroma_db/
+
+# User uploads; only the sample PDF is kept in the repo
+backend/data/documents/*
+!backend/data/documents/consistent_hashing_test.pdf
+
+# Flashcards and quiz data
+backend/studypilot.db

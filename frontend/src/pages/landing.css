@@ -1,0 +1,150 @@
+.lp { min-height: 100%; background: #000; max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+.lp-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 24px 0; }
+.lp-brand { font-weight: 600; font-size: 17px; letter-spacing: -0.02em; }
+.lp-links { display: flex; gap: 4px; }
+.lp-links a { padding: 8px 14px; border-radius: 999px; font-size: 14px; color: var(--muted); transition: color .15s; }
+.lp-links a:hover { color: #fff; }
+.lp-pill { justify-self: end; background: #fff; color: #000; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; }
+
+.lp-hero { text-align: center; padding: 88px 0 0; display: flex; flex-direction: column; align-items: center; }
+.lp-hero h1 { font-size: clamp(34px, 6vw, 68px); line-height: 1.04; font-weight: 600; letter-spacing: -0.04em; }
+.lp-hero > p { max-width: 520px; margin: 24px 0 34px; color: var(--muted); font-size: 17px; line-height: 1.55; }
+
+.lp-cta { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: #000; font-weight: 500; font-size: 15px; padding: 5px 20px 5px 5px; border-radius: 999px; transition: transform .15s; }
+.lp-cta:hover { transform: translateX(2px); }
+.lp-cta .circle { width: 34px; height: 34px; border-radius: 50%; background: #000; color: #fff; display: grid; place-items: center; }
+
+/* Example answer under the hero */
+.demo { width: 100%; max-width: 680px; margin-top: 72px; text-align: left; border: 1px solid var(--line); border-radius: 18px; background: #0c0c0e; padding: 22px; }
+.demo-q { justify-self: end; margin-left: auto; width: fit-content; max-width: 80%; background: #fff; color: #000; padding: 10px 14px; border-radius: 14px 14px 4px 14px; font-size: 14px; line-height: 1.45; }
+.demo-a { margin-top: 18px; font-size: 15px; line-height: 1.65; color: #d6d6da; display: grid; gap: 10px; }
+.demo-a b { color: #fff; font-weight: 600; }
+.cite { display: inline-block; margin-left: 6px; font-family: var(--mono); font-size: 11.5px; color: #000; background: var(--pink); padding: 1px 7px; border-radius: 5px; vertical-align: 1px; white-space: nowrap; }
+
+.lp-section { padding-top: 120px; }
+.lp-section h2 { font-size: 15px; font-weight: 500; color: var(--muted); margin-bottom: 20px; }
+
+.lp-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.lp-card { border-radius: 16px; padding: 22px; color: #000; display: flex; flex-direction: column; align-items: flex-start; transition: transform .25s ease, box-shadow .25s ease; }
+.lp-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -12px rgba(255,255,255,.18); }
+.lp-card.pink { background: var(--pink); }
+.lp-card.blue { background: var(--blue); }
+.lp-card.salmon { background: var(--salmon); }
+.lp-card .tag { font-size: 12px; border: 1px solid rgba(0,0,0,.6); border-radius: 999px; padding: 2px 10px; margin: 22px 0 12px; }
+.lp-card h3 { font-size: 20px; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; }
+.lp-card p { font-size: 14px; line-height: 1.5; margin-top: 8px; color: rgba(0,0,0,.72); }
+
+/* Small illustrations of each input type, drawn with plain elements */
+.mini { width: 100%; height: 150px; background: rgba(255,255,255,.55); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; justify-content: center; gap: 9px; font-family: var(--mono); font-size: 11.5px; }
+.mini i { display: block; height: 7px; border-radius: 4px; background: rgba(0,0,0,.18); }
+.mini i.short { width: 55%; }
+.mini.page { position: relative; }
+.mini.page .pg { position: absolute; top: 10px; right: 12px; color: rgba(0,0,0,.55); }
+.mini.page i.hl { background: #000; }
+.mini.transcript > div { display: flex; align-items: center; gap: 10px; padding: 4px 6px; border-radius: 6px; }
+.mini.transcript > div i { flex: 1; }
+.mini.transcript > div.hl { background: #000; color: #fff; }
+.mini.transcript > div.hl i { background: rgba(255,255,255,.5); }
+.mini.files > div { display: flex; justify-content: space-between; padding: 7px 9px; background: rgba(255,255,255,.7); border-radius: 6px; }
+.mini.files span { color: rgba(0,0,0,.5); }
+
+.lp-line { height: 1px; background: var(--line); transform-origin: left; }
+.lp-pipeline { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); }
+.lp-pipeline li { padding: 20px 20px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.lp-pipeline li + li { padding-left: 20px; border-left: 1px solid var(--line); }
+.lp-pipeline code { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.lp-pipeline strong { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; margin-top: 10px; }
+.lp-pipeline span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+
+.lp-footer { display: flex; justify-content: space-between; margin-top: 120px; padding: 28px 0 36px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.lp-footer a { color: #fff; }
+
+/* =====================================================================
+   Animations
+   - Hero parts animate once on page load (".enter" and the h1 lines),
+     each waiting for its own delay in the --d variable.
+   - Lower sections animate when scrolled into view: Landing.jsx adds the
+     class "in" to [data-reveal] elements; --i staggers them.
+   The keyframes animate "translate" and "scale" (not "transform"), so the
+   cards' hover lift, which uses "transform", still works afterwards.
+   ===================================================================== */
+
+@keyframes rise      { from { opacity: 0; translate: 0 22px; } to { opacity: 1; translate: 0 0; } }
+@keyframes drop-in   { from { opacity: 0; translate: 0 -10px; } to { opacity: 1; translate: 0 0; } }
+@keyframes line-up   { from { translate: 0 110%; } to { translate: 0 0; } }
+@keyframes bubble-in { from { opacity: 0; translate: 18px 0; scale: .96; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes pop       { 0% { opacity: 0; scale: .5; } 70% { opacity: 1; scale: 1.08; } 100% { opacity: 1; scale: 1; } }
+@keyframes typing    { 0% { opacity: 0; } 15%, 80% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes blink     { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+@keyframes draw      { from { scale: 0 1; } to { scale: 1 1; } }
+@keyframes highlight { from { background: transparent; color: inherit; } }
+@keyframes drift     { from { translate: -40px 0; } to { translate: 40px 20px; } }
+@keyframes glow-in   { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- Page load --- */
+.lp-nav { animation: drop-in .6s ease both; }
+
+.lp-hero h1 .line { display: block; overflow: hidden; padding-bottom: .08em; }   /* mask: text slides up from behind */
+.lp-hero h1 .line > span { display: inline-block; animation: line-up .9s cubic-bezier(.2, .7, .2, 1) both; animation-delay: var(--d); }
+
+.enter { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; animation-delay: var(--d); }
+
+.lp-cta .circle { transition: transform .2s ease; }
+.lp-cta:hover .circle { transform: translateX(3px); }
+
+/* Soft pastel glow behind the headline that slowly drifts */
+.lp-hero { position: relative; isolation: isolate; }
+.lp-hero::before {
+  content: ""; position: absolute; z-index: -1; top: 10px; left: calc(50% - 380px);
+  width: 760px; height: 440px; pointer-events: none; filter: blur(50px);
+  background:
+    radial-gradient(closest-side at 35% 45%, rgba(255, 142, 196, .16), transparent),
+    radial-gradient(closest-side at 65% 55%, rgba(134, 220, 255, .13), transparent);
+  animation: glow-in 2s ease both, drift 14s ease-in-out infinite alternate;
+}
+
+/* The demo plays like a real chat: question, typing dots, then the answer */
+.demo-q { animation: bubble-in .55s cubic-bezier(.2, .7, .2, 1) both; animation-delay: 1s; }
+.demo-a { position: relative; }
+.demo-typing { position: absolute; top: 4px; left: 0; display: flex; gap: 5px; animation: typing 1.1s ease both; animation-delay: 1.45s; }
+.demo-typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: blink 1s infinite; }
+.demo-typing i:nth-child(2) { animation-delay: .15s; }
+.demo-typing i:nth-child(3) { animation-delay: .3s; }
+.demo-a p { animation: rise .6s ease both; }
+.demo-a p:nth-of-type(1) { animation-delay: 2.5s; }
+.demo-a p:nth-of-type(2) { animation-delay: 2.9s; }
+.demo-a .cite { animation: pop .45s ease both; }
+.demo-a p:nth-of-type(1) .cite { animation-delay: 2.85s; }
+.demo-a p:nth-of-type(2) .cite { animation-delay: 3.25s; }
+
+/* --- On scroll --- */
+[data-reveal] { opacity: 0; }
+[data-reveal].in { animation: rise .75s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 110ms); }
+.lp-line[data-reveal].in { animation: draw 1.1s cubic-bezier(.2, .7, .2, 1) both; opacity: 1; }
+
+/* Each card's small illustration comes alive after the card appears */
+.mini.page i.hl { transform-origin: left; }
+.lp-card.in .mini.page i.hl { animation: draw .8s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i) * 110ms + 450ms); }
+.lp-card.in .mini.transcript > div.hl { animation: highlight .5s ease both; animation-delay: calc(var(--i) * 110ms + 500ms); }
+.lp-card.in .mini.files > div { animation: rise .5s ease both; }
+.lp-card.in .mini.files > div:nth-child(1) { animation-delay: calc(var(--i) * 110ms + 350ms); }
+.lp-card.in .mini.files > div:nth-child(2) { animation-delay: calc(var(--i) * 110ms + 470ms); }
+.lp-card.in .mini.files > div:nth-child(3) { animation-delay: calc(var(--i) * 110ms + 590ms); }
+
+/* People who turn on "reduce motion" in their system settings get no animation */
+@media (prefers-reduced-motion: reduce) {
+  .lp *, .lp *::before { animation: none !important; transition: none !important; }
+  [data-reveal] { opacity: 1; }
+  .demo-typing { display: none; }
+}
+
+@media (max-width: 860px) {
+  .lp { padding: 0 16px; }
+  .lp-nav { grid-template-columns: 1fr auto; } .lp-links { display: none; }
+  .lp-hero { padding-top: 56px; }
+  .lp-cards { grid-template-columns: 1fr; }
+  .lp-pipeline { grid-template-columns: 1fr; }
+  .lp-pipeline li, .lp-pipeline li + li { padding: 16px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .lp-pipeline strong { margin-top: 0; }
+}
