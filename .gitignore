@@ -34,3 +34,6 @@ backend/studypilot.db
 .claude/settings.local.json
 Thumbs.db
 .DS_Store
+
+# Internship report (kept locally only)
+report/
