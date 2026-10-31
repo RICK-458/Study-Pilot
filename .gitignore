@@ -1,8 +1,17 @@
+# Secrets: API keys live in backend/.env (copy backend/.env.example)
 .env
+.env.*
+!.env.example
+
+# Python
 __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Node / Vite
+node_modules/
+dist/
 
 # Vector database: rebuilt locally with `python -m rag.indexer`
 backend/chroma_db/
@@ -13,3 +22,15 @@ backend/data/documents/*
 
 # Flashcards and quiz data
 backend/studypilot.db
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Editor and OS files
+.vscode/
+.idea/
+.claude/settings.local.json
+Thumbs.db
+.DS_Store
